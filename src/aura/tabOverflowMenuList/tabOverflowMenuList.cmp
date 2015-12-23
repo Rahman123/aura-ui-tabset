@@ -16,7 +16,7 @@
 
 -->
 <aura:component extends="ui:menuList" description="An extension of ui:menuList to add custom keyboard interactions for a tab overflow menu">
-	<aura:registerEvent access="PUBLIC" name="forwardWrap" type="ui:collapse" description="The event fired when the menu list attempts a forward wrap due to a key press."/>
-	<aura:registerEvent access="PUBLIC" name="reverseWrap" type="ui:collapse" description="The event fired when the menu list attempts a reverse wrap due to a key press."/>
+	<aura:registerEvent access="PUBLIC" name="forwardWrap" type="c:collapse" description="The event fired when the menu list attempts a forward wrap due to a key press."/>
+	<aura:registerEvent access="PUBLIC" name="reverseWrap" type="c:collapse" description="The event fired when the menu list attempts a reverse wrap due to a key press."/>
 	{!v.body}
 </aura:component>

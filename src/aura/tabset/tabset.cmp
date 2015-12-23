@@ -15,11 +15,11 @@
     limitations under the License.
 
 -->
-<aura:component extensible="true" implements="ui:visible" support="GA" description="A tab set that displays a list of tabs in an unordered list.">
+<aura:component extensible="true" implements="c:visible" description="A tab set that displays a list of tabs in an unordered list.">
     <aura:attribute name="tabs" type="List" description="The collection of objects to construct tabs." />
-    <aura:attribute name="tabItems" access="private" type="List" description="Use internally for passing a list of tab items to ui:tabBar component." />
+    <aura:attribute name="tabItems" access="private" type="List" description="Use internally for passing a list of tab items to c:tabBar component." />
     <aura:attribute name="class" type="String" description="A CSS style to be attached to the component. This style is added in addition to base styles output by the component." />
-    <aura:attribute name="lazyRenderTabs" type="Boolean" default="false" description="If true, contained ui:tab components are rendered only when they are activated. The default is false." />
+    <aura:attribute name="lazyRenderTabs" type="Boolean" default="false" description="If true, contained c:tab components are rendered only when they are activated. The default is false." />
 
     <aura:attribute name="useOverflowMenu" type="Boolean" default="false" description="Set to true to use an overflow menu. The default is false. The overflow menu contains any tabs that fall outside the width of the tabset."/>
     <aura:attribute name="overflowLabel" type="String" default="More" description="The text label that appears on the label. The default is &quot;More&quot;."/>
@@ -38,13 +38,13 @@
     -->
 
     <!-- These should be aura methods instead -->
-    <aura:registerevent name="addTab" type="ui:tabsetEvent" description="Add new tab to the component." />
-    <aura:registerevent name="removeTab" type="ui:tabsetEvent" description="Remove a tab from the component." />
-    <aura:registerevent name="activateTab" type="ui:tabsetEvent" description="Activate a tab." />
-    <aura:registerevent name="getActiveTab" type="ui:tabsetEvent" description="Get the currently active tab." />
+    <aura:registerevent name="addTab" type="c:tabsetEvent" description="Add new tab to the component." />
+    <aura:registerevent name="removeTab" type="c:tabsetEvent" description="Remove a tab from the component." />
+    <aura:registerevent name="activateTab" type="c:tabsetEvent" description="Activate a tab." />
+    <aura:registerevent name="getActiveTab" type="c:tabsetEvent" description="Get the currently active tab." />
 
-    <aura:registerevent name="beforeActivate" type="ui:tabsetEvent" description="The event is triggered before the tab is activated. Can be canceled to prevent the tab from activating." />
-    <aura:registerevent name="onActivate" type="ui:tabsetEvent" description="The event is triggered when the tab is activated."/>
+    <aura:registerevent name="beforeActivate" type="c:tabsetEvent" description="The event is triggered before the tab is activated. Can be canceled to prevent the tab from activating." />
+    <aura:registerevent name="onActivate" type="c:tabsetEvent" description="The event is triggered when the tab is activated."/>
 
     <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
 
@@ -53,11 +53,11 @@
     <aura:handler name="activateTab" action="{!c.activateTab}" />
     <aura:handler name="getActiveTab" action="{!c.getActiveTab}" />
 
-    <aura:dependency resource="markup://ui:tab" type="COMPONENT"/>
-    <aura:dependency resource="markup://ui:tabItem" type="COMPONENT"/>
+    <aura:dependency resource="markup://c:tab" type="COMPONENT"/>
+    <aura:dependency resource="markup://c:tabItem" type="COMPONENT"/>
 
     <div class="{!v.class}" aura:id="tabContainer" aura:flavorable="true">
-        <ui:tabBar aura:id="tabBar" tabs="{!v.tabItems}"
+        <c:tabBar aura:id="tabBar" tabs="{!v.tabItems}"
                    onTabActivated="{!c.onTabActivated}" onTabClosed="{!c.onTabClosed}"
                    useOverflowMenu="{!v.useOverflowMenu}"
                    overflowLabel="{!v.overflowLabel}"/>

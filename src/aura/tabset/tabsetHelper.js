@@ -320,7 +320,7 @@
      * @private
      */
     getTabComponents: function (body) {
-        var type = "ui:tab";
+        var type = "c:tab";
         var ret = [];
         if (!body) {
             return ret;
@@ -442,7 +442,7 @@
     },
 
     CONSTANTS: {
-        TAB_DEF: "markup://ui:tab",
-        TAB_ITEM_DEF: "markup://ui:tabItem"
+        TAB_DEF: "markup://c:tab",
+        TAB_ITEM_DEF: "markup://c:tabItem"
     }
 })// eslint-disable-line semi
