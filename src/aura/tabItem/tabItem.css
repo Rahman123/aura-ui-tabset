@@ -15,25 +15,4 @@
  */
 
 .THIS {
-	list-style: none;
-	white-space: nowrap;
-	display: inline-block;
-}
-
-.THIS a {
-	display: block;
-	text-decoration: none;
-}
-
-.THIS .close {
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	position: relative;
-	text-align: center;
-	margin-left: 10px;
-}
-
-.THIS.hidden {
-	display: none !important;
 }

@@ -38,8 +38,8 @@
         <aura:attribute name="callback" type="Object" description="Callback function"/>
     </aura:method>
 
-    <li aura:id="li" class="{!v.class + ' tabs__item' + (v.active ? ' active' : '') + (v.hidden ? ' hidden' : '')}"  role="presentation">
-        <a class="tabHeader" onclick="{!c.onTabActivated}" href="javascript:void(0);" aura:id="tabItem"
+    <li aura:id="li" class="{!'slds-tabs--default__item slds-text-heading--label' + (v.active ? ' slds-active' : '') + (v.hidden ? ' hidden' : '')}"  role="presentation">
+        <a class="slds-tabs--default__link" onclick="{!c.onTabActivated}" href="javascript:void(0);" aura:id="tabItem"
            onmouseover="{!c.onTabHover}" onmouseout="{!c.onTabUnhover}" onfocus="{!c.onTabHover}" onblur="{!c.onTabUnhover}"
            aria-controls="{!v.ariaControlId}" aria-selected="{!v.active ? 'true' : 'false'}" title="{!v.title}" tabindex="{!v.active ? 0: -1}" role="tab">
 

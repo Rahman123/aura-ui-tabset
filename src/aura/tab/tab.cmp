@@ -33,7 +33,7 @@
 
     <aura:handler name="setActive" action="{!c.setActive}" />
 
-    <section class="{!v.class + ' tabs__content' + (v.scroll ? ' scrolling' : '') + (v.active ? ' active' : '')}" aria-expanded="{!v.active ? 'true' : 'false'}" aura:id="tabBody" role="tabpanel">
+    <section class="{!'slds-tabs--default__content' + (v.scroll ? ' scrolling' : '') + (v.active ? ' slds-show' : ' slds-hide')}" aria-expanded="{!v.active ? 'true' : 'false'}" aura:id="tabBody" role="tabpanel">
         {!v.body}
     </section>
 

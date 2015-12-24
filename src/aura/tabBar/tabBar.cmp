@@ -48,12 +48,10 @@
         <c:resizeObserver onresize="{!c.onResize}"/>
     </aura:if>
 
-    <div class="{!v.class}" aura:id="div" role="application tablist">
-        <ul class="tabs__nav" aura:id="tabItemsContainer" role="presentation" onkeydown="{!c.onKeyDown}">
+        <ul class="slds-tabs--default__nav" aura:id="tabItemsContainer" role="presentation" onkeydown="{!c.onKeyDown}">
             {!v.tabHeaders}
             <aura:if isTrue="{!v.useOverflowMenu}">
                 <c:tabOverflowMenuItem aura:id="overflowMenu" title="{!v.overflowLabel}" icon="{!v.overflowIcon}" onTabSelection="{!c.onOverflowSelection}" />
             </aura:if>
         </ul>
-    </div>
 </aura:component>

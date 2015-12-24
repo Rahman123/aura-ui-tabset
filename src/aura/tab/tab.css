@@ -18,11 +18,3 @@
 .THIS.scrolling {
 	overflow: auto;
 }
-
-.THIS.tabs__content {
-	display: none;
-}
-
-.THIS.active {
-	display: block;
-}

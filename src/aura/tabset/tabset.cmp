@@ -56,7 +56,7 @@
     <aura:dependency resource="markup://c:tab" type="COMPONENT"/>
     <aura:dependency resource="markup://c:tabItem" type="COMPONENT"/>
 
-    <div class="{!v.class}" aura:id="tabContainer" aura:flavorable="true">
+    <div class="slds-tabs--default" aura:id="tabContainer" aura:flavorable="true">
         <c:tabBar aura:id="tabBar" tabs="{!v.tabItems}"
                    onTabActivated="{!c.onTabActivated}" onTabClosed="{!c.onTabClosed}"
                    useOverflowMenu="{!v.useOverflowMenu}"
